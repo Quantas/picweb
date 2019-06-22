@@ -212,7 +212,7 @@ setTimeout("doUptime()",1000);
   </ul>
   <div class="TabbedPanelsContentGroup">
     <div class="TabbedPanelsContent">
-<table class="bodyTable" cellspacing="0" cellpadding="4" align="center" bgcolor="#000000">
+<table class="bodyTable" cellspacing="0" cellpadding="4" align="center">
 	<tr>
     <th class="tableTD" colspan="2">
     Server Statistics
@@ -319,7 +319,7 @@ setTimeout("doUptime()",1000);
     </tr>
     <?php } while ($row_users = mysql_fetch_assoc($users)); ?>
 </table>
-<table border="0" bgcolor="#000000">
+<table border="0">
   <tr>
     <td><?php if ($pageNum_users > 0) { // Show if not first page ?>
           <a href="<?php printf("%s?pageNum_users=%d%s", $currentPage, 0, $queryString_users); ?>">First</a>
@@ -344,7 +344,7 @@ setTimeout("doUptime()",1000);
     <strong>Add News Story</strong><br />
 
 <form action="<?php echo $editFormAction; ?>" method="post" name="form1" id="form1">
-  <table align="center" bgcolor="#000000">
+  <table align="center">
     <tr valign="baseline">
       <td nowrap="nowrap" align="right">Story:</td>
       <td><input type="text" name="story" value="" size="32" />
@@ -356,7 +356,7 @@ setTimeout("doUptime()",1000);
   <input type="hidden" name="date" value="<?php echo $newsdate; ?>" />
   <input type="hidden" name="MM_insert" value="form1" />
 </form>
-<table class="bodyTable" cellspacing="0" cellpadding="4" bgcolor="#000000">
+<table class="bodyTable" cellspacing="0" cellpadding="4">
   <tr>
   	<th colspan="5">News</th>
   </tr>
@@ -379,7 +379,7 @@ setTimeout("doUptime()",1000);
 </table>
     </div>
     <div class="TabbedPanelsContent">
-    	<table class="bodyTable" cellspacing="0" cellpadding="4" align="center"  bgcolor="#000000">
+    	<table class="bodyTable" cellspacing="0" cellpadding="4" align="center">
   <tr>
     <th>First Name</th>
     <th>Last Name</th>

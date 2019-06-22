@@ -1,7 +1,26 @@
 <?php
 //sql.php - File that holds many of picweb's single value sql statements
 //Created by Andrew Landsverk
-//Last updated 7/20/2009
+//Last updated 1/8/2010
+
+//show whos_online
+function show_whos_online(){
+	include('config.php');
+	mysql_select_db($database_picweb, $picweb);
+	$query = "SELECT * from whos_online ORDER BY username DESC";
+	$online = mysql_query($query, $picweb) or die(mysql_error());
+	$row_online = mysql_fetch_assoc($online);
+	$totalRows_online = mysql_num_rows($online);
+	
+	$color="1"; ?>
+  <?php do { 
+	if (($row_online['username']) != ($_SESSION['username'])) {
+?>
+<a href="javascript:void(0)" onclick="javascript:chatWith('<?php echo $row_online['username']; ?>')"><?php echo $row_online['username']; ?></a>
+	<?php } else { echo $row_online['username']; } ?>
+    <?php } while ($row_online = mysql_fetch_assoc($online)); ?>
+<?php
+}//end function
 
 //return the count of a user album
 function checkUserAlbumCount($uid){

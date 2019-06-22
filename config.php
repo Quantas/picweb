@@ -10,7 +10,7 @@ $start = $time;
 if (!isset($_SESSION)) {
   session_start();
 }
-$hostname_picweb = "localhost";
+$hostname_picweb = "database";
 $database_picweb = "picweb";
 $username_picweb = "picweb";
 $password_picweb = "picweb";

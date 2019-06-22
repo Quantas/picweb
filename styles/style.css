@@ -1,295 +1,150 @@
 @charset "utf-8";
-
 /* CSS Document */
 
-
-
 body
-
 {
-
     text-align: center;
-
 	font-family: Arial, Helvetica, sans-serif;
-
-	background-color:#000000;
-	color:#FFFFFF;
-
+	background-color:#FFFFFF;
 }
-
-
 
 A:link {
-	font-weight:bold;
 	text-decoration: none; 
-
-	color:#FFFFFF;
-
+	color:blue;
 }
-
-
 
 A:visited {
-font-weight:bold;
 text-decoration: none; 
-
-color:#FFFFFF;
-
+color:blue;
 }
-
-
 
 A:active {
-
 text-decoration: none; 
-font-weight:bold;
-color:#FFFFFF;
-
+color:blue;
 }
-
-
 
 A:hover {
-
-text-decoration: none; 
-font-weight:bold;
-color: #ff7100;
-
+text-decoration: underline; 
+color: red;
 }
 
+.chatboxoptions {
+	float: right;
+}
 
+.chatboxoptions a {
+	text-decoration: none;
+	color: white;
+	font-weight:bold;
+	font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+}
 
 img{
-
 border:0;
-
 }
-
-
 
 .headerLeft{ 
-
 	text-align: left;
-
 }
-
-
 
 .headerRight{
-
 	text-align: right;
-
 }
-
-
 
 .mainTable{
-
 width:100%;
-
 }
-
-
 
 #container{
-
 margin-left:auto;
-
 margin-right:auto;
-
 border-style:solid;
-
 border-width:thin;
-border-color:#ff7100;
-
-width:1024px;
-
+width:800px;
 height:auto;
-
 }
-
-
 
 #header{
-
-background-color:#000000;
-color:#ffffff;
-
-border-bottom-color:#ff7100;
+background-color:#FFFFFF;
 border-bottom-style:solid;
-
 border-bottom-width:thin;
-
 overflow:hidden;
-
 }
-
-
 
 #content{
-
-/*max-height:490px;*/
-
+max-height:490px;
 position:inherit;
-
 overflow:auto;
-
 padding-top:4px;
-
 padding-bottom:4px;
-
 }
 
-
+#whos_online{
+border-top-style:solid;
+border-top-width:thin;
+overflow:hidden;
+text-align:center;
+height:auto;
+}
 
 #footer{
-
+height:auto;
 border-top-style:solid;
-
 border-top-width:thin;
-border-top-color:#ff7100;
 overflow:hidden;
-
+text-align:center;
 }
-
-
 
 #menu{
-
 height:auto;
-
 overflow:hidden;
-
 padding-bottom:3px;
-
 border-bottom-style:solid;
-
 border-bottom-width:thin;
-border-bottom-color:#ff7100;
-background-color:#000000;
-color:#ffffff;
 text-align:center;
-
 }
-
-
 
 .bodyTable{
-
 text-align:center;
-
 border-left:solid;
-
 border-left-width:thin;
-border-left-color:#ff7100;
-
 border-top:solid;
-border-top-color:#ff7100;
 border-top-width:thin;
-
 border-right:solid;
-border-right-color:#ff7100;
 border-right-width:thin;
-
 }
-
-
 
 .galleryTable{
-
 text-align:center;
-
 }
-
-
 
 .tableTD{
-
 border-bottom:solid;
-
 border-bottom-width:thin;
-border-color:#ff7100;
-
 }
-
-
 
 th{
-
-background-color:#000000;
-color:#FF7100;
-
+background-color:#CCCCCC;
 border-bottom:solid;
-border-bottom-color:#ff7100;
 border-bottom-width:thin;
-
 }
-
-
 
 .row1{
-
-background-color:#000000;
-
+background-color:#FFFFFF;
 }
-
 .row2{
-
-background-color:#000000;
-
+background-color:#CCCCCC;
 }
-
-
 
 .adminSide{
-
-background-color:#000000;
-color:#ff7100;
+background-color:#CCCCCC;
 border-bottom:solid;
-
 border-bottom-width:thin;
-border-bottom-color:#ff7100;
 border-right:solid;
-border-right-color:#ff7100;
 border-right-width:thin;
-
 }
-
-
 
 #scroll{
-
  max-height:488px;
-
  overflow:auto;
-
 }
-
-#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
-#lightbox img{ width: auto; height: auto;}
-#lightbox a img{ border: none; }
-
-#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
-#imageContainer{ padding: 10px; }
-
-#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
-#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
-#imageContainer>#hoverNav{ left: 0;}
-#hoverNav a{ outline: none;}
-
-#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); 
- display: block; }
-#prevLink { left: 0; float: left;}
-#nextLink { right: 0; float: right;}
-#prevLink:hover, #prevLink:visited:hover { background: url(../images/prevlabel.gif) left 15% no-repeat; }
-#nextLink:hover, #nextLink:visited:hover { background: url(../images/nextlabel.gif) right 15% no-repeat; }
-
-#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
-
-#imageData{	padding:0 10px; color: #666; }
-#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
-#imageData #caption{ font-weight: bold;	}
-#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
-#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
-
-#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }

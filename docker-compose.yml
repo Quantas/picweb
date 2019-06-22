@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  db:
+    image: mysql:5.6
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./picweb.sql:/docker-entrypoint-initdb.d/dump.sql
+    restart: always
+    networks:
+      - picweb
+    environment:
+      MYSQL_USER: picweb
+      MYSQL_PASSWORD: picweb
+      MYSQL_DATABASE: picweb
+      MYSQL_RANDOM_ROOT_PASSWORD: 'true'
+
+  web:
+    image: picweb-og:latest
+    restart: always
+    networks:
+      - picweb
+    ports:
+      - 80:80
+    links:
+      - "db:database"
+
+networks:
+  picweb:
+
+volumes:
+  db-data:
