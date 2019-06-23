@@ -15,4 +15,4 @@ Created in 2009 by Andrew Landsverk as a learning exercise.
 
 Full instructions are not provided for LAMP stacks at this time. You will need to edit a few files to point to a different MySQL instance however:
 
-- `config.php`
+- `picweb/config.php`
