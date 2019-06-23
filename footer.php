@@ -6,7 +6,7 @@ Who's Online:<?php show_whos_online(); ?>
 <?php } ?>
 <div id="footer">
 &copy; 2010 PicWeb - All Rights Reserved<br />
-Site Designed by <a href="mailto:alandsve@menards.net">Andrew Landsverk</a><br />
+Site Designed by <a href="mailto:dewdew@gmail.com">Andrew Landsverk</a><br />
 <?php 
 $browser = getBrowserType();
 if($browser == "IE"){ ?>

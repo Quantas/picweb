@@ -17,7 +17,9 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: 'true'
 
   web:
-    image: picweb-og:latest
+    image: picweb:latest
+    build:
+      context: .
     restart: always
     networks:
       - picweb
